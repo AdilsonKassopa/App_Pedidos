@@ -19,6 +19,11 @@ class PedidosRepository{
    getPedidos(){
      return pedidos
    }
+   updatePedidos(data){
+     pedidos = data
+     savePedidos()
+     return pedidos
+   }
 }
 function savePedidos(){
   fs.writeFile("Pedidos.json",JSON.stringify(pedidos),(err)=>{
